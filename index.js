@@ -11,13 +11,13 @@ class ContaCorrente{
     sacar(valor){
         if(this._saldo >= valor){
             this._saldo -= valor;
+            return valor;
         }else console.log("Impossível");
     }
 
     depositar(valor){
-        if(valor > 0){
-            this._saldo += valor;
-        }
+        if(valor <= 0) return;
+            this._saldo += valor;    
     }
 }
 
@@ -36,8 +36,10 @@ const contaCorrenteRicardo = new ContaCorrente();
 contaCorrenteRicardo.agencia = 1000;
 
 contaCorrenteRicardo.depositar(100);
-contaCorrenteRicardo.sacar(20);
+const valorSacado = contaCorrenteRicardo.sacar(20);
 
+
+console.log(valorSacado);
 console.log(contaCorrenteRicardo);
 
 
