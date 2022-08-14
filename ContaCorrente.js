@@ -6,5 +6,10 @@ export class ContaCorrente extends Conta{
         super(0, cliente, agencia);
     }
 
+    //sobreescrevendo o comportamento sacar
+    sacar(valor){
+        let taxa = 1.1;
+        return this._sacar(valor, taxa);
+    }
   
 }

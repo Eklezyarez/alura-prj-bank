@@ -12,8 +12,21 @@ export class Conta{
         }
     }
 
+    get cliente(){
+        return this._cliente;
+    }
+
+    get saldo(){
+        return this._saldo;
+    }
 
     sacar(valor){
+        let taxa = 1;
+        return this._sacar(valor, taxa);
+    }
+
+
+    _sacar(valor){
 
         let taxa = 1;    
         const valorSacado = taxa * valor;
@@ -21,6 +34,7 @@ export class Conta{
             this._saldo -= valorSacado;
             return valorSacado;
         }
+        return 0;
     }
 
     depositar(valor){
