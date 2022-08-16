@@ -1,2 +1,2 @@
 # alura-prj-bank
-### Orientação inicial POO com JavaScript
+### Projeto POO com JavaScript
