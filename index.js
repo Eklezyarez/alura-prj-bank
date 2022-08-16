@@ -5,9 +5,12 @@ import { SistemAutenticacao } from "./SistemAutenticacao.js"
 
 
 const diretor  = new Diretor("Rodrigo", 10000, 12345678900);
-const gerente = new Gerente ("Ricardo", 5000, 12345648901);
+diretor.cadastrarSenha("123456");
 
-const estaLogado = SistemAutenticacao.login(diretor, "123456789");
+const gerente = new Gerente ("Ricardo", 5000, 12345648901);
+gerente.cadastrarSenha("123456");
+
+const estaLogado = SistemAutenticacao.login(diretor, "123456");
 
 console.log(estaLogado);
 
