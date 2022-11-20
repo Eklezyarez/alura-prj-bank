@@ -3,7 +3,6 @@ import { Gerente } from "./Funcionario/Gerente.js"
 import { Diretor } from "./Funcionario/Diretor.js"
 import { SistemAutenticacao } from "./SistemAutenticacao.js"
 
-
 const diretor  = new Diretor("Rodrigo", 10000, 12345678900);
 diretor.cadastrarSenha("123456");
 
