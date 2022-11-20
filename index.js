@@ -14,5 +14,3 @@ const estaLogado = SistemAutenticacao.login(gerente, "12345");
 
 console.log(estaLogado);
 
-
-
